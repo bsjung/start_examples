@@ -1,0 +1,7 @@
+name: ws
+
+dependencies:
+  web_socket_channel: ^1.1.0
+  start: 
+    git: 
+      url: https://github.com/bsjung/start.git
