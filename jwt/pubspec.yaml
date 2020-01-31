@@ -1,0 +1,6 @@
+name: jwt
+
+dependencies:
+  start_jwt: 
+    git: 
+      url: https://github.com/bsjung/start_jwt.git
