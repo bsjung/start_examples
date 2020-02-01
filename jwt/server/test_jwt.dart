@@ -14,6 +14,7 @@ void main() {
     print ("Payload : " + payload.toString());
     
     // Validate a token.
+    print ("token : " + token.toString());
     
     jwt.isValid(token);
     

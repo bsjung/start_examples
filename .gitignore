@@ -2,6 +2,7 @@
 *.packages
 *.dart_tool
 *.swp
+*.lock
 .DS_Store
 
 # Logs
