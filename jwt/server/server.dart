@@ -11,7 +11,7 @@ void main() {
     print('${rec.level.name}: ${rec.time}: ${rec.message}');
   });
 
-  start(port: 3000).then((Server app) {
+  start(port: 3000, cors: true).then((Server app) {
 
     app.static('web', jail: false);
 
