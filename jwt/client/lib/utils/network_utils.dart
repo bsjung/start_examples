@@ -60,7 +60,6 @@ class NetworkUtils {
 				uri,
 				headers: {
 					"Content-Type": "application/json",
-					"Access-Control-Allow-Origin": "*", // CORS
 					'x-access-token': authToken.toString(),
 				},
 			);
