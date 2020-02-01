@@ -15,7 +15,7 @@ void main() {
 
     app.static('web', jail: false);
 
-    app.post('/auth').listen((req) {
+    app.post('/api/v1/auth').listen((req) {
       //print (req.header('Content-Type'));
       req.payload().then((data) {
         print (data);
@@ -29,13 +29,29 @@ void main() {
         final token = jwt.encode(payload);
         var msg = {};
         msg['token'] = token;
-        msg['payload'] = payload;
-        req.response
-          .header('Content-Type', 'application/json')
-          .send(jsonEncode(msg));
+        msg['id'] = payload['name'];
+        msg['name'] = payload['name'];
+        req.response.header('Content-Type', 'application/json');
+        req.response.send(jsonEncode(msg));
       });
     });
 
-  });
+    app.get('/api/v1/home').listen((req) {
+      print(req.header('content-type'));
+      var token = req.header('x-access-token');
+      print ("token : " + token.toString());
+      var msg = {};
+      msg['token'] = token;
+      req.response.header('Content-Type', 'application/json');
+      req.response.send(jsonEncode(msg));
+    });
 
+    app.options('/api/v1/home').listen((req) {
+      var msg = {};
+      msg['options'] = 'ok';
+      req.response.header('Content-Type', 'application/json');
+      req.response.send(jsonEncode(msg));
+    });
+
+  });
 }

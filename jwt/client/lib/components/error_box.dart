@@ -11,7 +11,7 @@ class ErrorBox extends StatelessWidget {
 		  return new Container(
 			  child: new Column(
 				  children: <Widget>[
-					  new Image.asset('lib/app/assets/logo.png'),
+					  new Image.asset('logo.png'),
 					
 					  new Container(
 						  decoration: new BoxDecoration(
@@ -37,8 +37,9 @@ class ErrorBox extends StatelessWidget {
 			  ),
 		  );
 	  } else {
+		  print ("error");
 		  return new Container(
-			  child: new Image.asset('lib/app/assets/logo.png')
+			  child: new Image.asset('logo.png')
 		  );
 	  }
   }

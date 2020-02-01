@@ -51,13 +51,17 @@ class NetworkUtils {
 	}
 
 	static fetch(var authToken, var endPoint) async {
+		print ('authToken : ' + authToken.toString());
+		print ('endPoint : ' + endPoint.toString());
 		var uri = host + endPoint;
 
 		try {
 			final response = await http.get(
 				uri,
 				headers: {
-					'x-access-token': authToken
+					"Content-Type": "application/json",
+					"Access-Control-Allow-Origin": "*", // CORS
+					'x-access-token': authToken.toString(),
 				},
 			);
 
