@@ -12,7 +12,7 @@ void main() {
 
     app.ws('/socket').listen((socket) {
 
-      socket.onMessage().listen((data) {
+      socket.onMessage.listen((data) {
         print('data: $data');
         socket.send(data);
       });
