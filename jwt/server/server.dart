@@ -46,12 +46,5 @@ void main() {
       req.response.send(jsonEncode(msg));
     });
 
-    app.options('/api/v1/home').listen((req) {
-      var msg = {};
-      msg['options'] = 'ok';
-      req.response.header('Content-Type', 'application/json');
-      req.response.send(jsonEncode(msg));
-    });
-
   });
 }
