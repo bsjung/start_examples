@@ -5,12 +5,13 @@ import '../gallery.dart';
 
 List<GalleryScaffold> buildGallery() {
 
+  Size size = Size(450, 450);
   return [
     new GalleryScaffold(
       listTileIcon: new Icon(Icons.insert_chart),
       title: 'Simple Pie Chart',
       subtitle: 'Simple pie chart with percentage',
-      childBuilder: () => new PieChart(percentage: 55),
+      childBuilder: () => new PieChart(size: size, percentage: 55),
     ),
   ];
 }

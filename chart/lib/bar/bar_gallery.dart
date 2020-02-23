@@ -12,7 +12,7 @@ List<GalleryScaffold> buildGallery() {
     "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"
   ];
 
-  Size size = Size(300, 300);
+  Size size = Size(450, 450);
 
   return [
     new GalleryScaffold(
